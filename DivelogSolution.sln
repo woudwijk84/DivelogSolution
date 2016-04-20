@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divelog", "Divelog\Divelog.csproj", "{1D197411-F849-40AB-B654-352F77B46FDC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divelog.Tests", "Divelog.Tests\Divelog.Tests.csproj", "{09EF4515-1BF0-45EB-BB84-5D0C34A57859}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D197411-F849-40AB-B654-352F77B46FDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D197411-F849-40AB-B654-352F77B46FDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D197411-F849-40AB-B654-352F77B46FDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D197411-F849-40AB-B654-352F77B46FDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09EF4515-1BF0-45EB-BB84-5D0C34A57859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09EF4515-1BF0-45EB-BB84-5D0C34A57859}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09EF4515-1BF0-45EB-BB84-5D0C34A57859}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09EF4515-1BF0-45EB-BB84-5D0C34A57859}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
