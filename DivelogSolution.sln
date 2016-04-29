@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divelog", "Divelog\Divelog.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Divelog.Tests", "Divelog.Tests\Divelog.Tests.csproj", "{09EF4515-1BF0-45EB-BB84-5D0C34A57859}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Duiklogboek", "Duiklogboek\Duiklogboek.csproj", "{41EF549D-BDAE-41F0-9676-C0089D43AEF9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{09EF4515-1BF0-45EB-BB84-5D0C34A57859}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09EF4515-1BF0-45EB-BB84-5D0C34A57859}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09EF4515-1BF0-45EB-BB84-5D0C34A57859}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41EF549D-BDAE-41F0-9676-C0089D43AEF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41EF549D-BDAE-41F0-9676-C0089D43AEF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41EF549D-BDAE-41F0-9676-C0089D43AEF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41EF549D-BDAE-41F0-9676-C0089D43AEF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
