@@ -1,0 +1,83 @@
+﻿@model IEnumerable<Duiklogboek.Models.DivelogApp.Dive>
+
+@{
+    ViewBag.Title = "Index";
+    var userName = User.Identity.GetUserName();
+}
+
+<h2>Dives</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", new { username = userName }, new {@class = "btn" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DiveNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DiveSite)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Buddy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Duration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Weather)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Visibility)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Notes)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiveNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiveSite)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Buddy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Duration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Weather)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Visibility)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Notes)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { username = userName, id = item.DiveId }) |
+                @Html.ActionLink("Details", "Details", new { username = userName, id = item.DiveId }) |
+                @Html.ActionLink("Delete", "Delete", new { username = userName, id = item.DiveId })
+            </td>
+        </tr>
+    }
+
+</table>

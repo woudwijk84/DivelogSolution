@@ -1,0 +1,90 @@
+﻿@model Duiklogboek.Models.DivelogApp.Dive
+
+@{
+    ViewBag.Title = "Details";
+    var username = User.Identity.GetUserName();
+}
+
+<h2>Details Dive</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DiveNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiveNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiveSite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiveSite)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Buddy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Buddy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Duration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Duration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Weather)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Weather)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Visibility)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Visibility)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Notes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Notes)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { username = username, id = Model.DiveId }) |
+    @Html.ActionLink("Back to List", "Index", new { username = username })
+</p>

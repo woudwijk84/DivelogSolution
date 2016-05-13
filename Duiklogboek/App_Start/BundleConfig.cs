@@ -24,8 +24,9 @@ namespace Duiklogboek
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/CeruleanBootStrap.css",
                       "~/Content/site.css"));
+            
         }
     }
 }
