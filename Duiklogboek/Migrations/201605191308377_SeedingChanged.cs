@@ -3,7 +3,7 @@ namespace Duiklogboek.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class TEST : DbMigration
+    public partial class SeedingChanged : DbMigration
     {
         public override void Up()
         {

@@ -1,6 +1,7 @@
 ﻿using Duiklogboek.Models;
 using Duiklogboek.Models.DivelogApp;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Data;
 using System.Data.Entity;
@@ -24,13 +25,16 @@ namespace Duiklogboek.Controllers.DivelogApp
         }
 
         // GET: Dives/Details/username/5
-        public ActionResult Details(string username, int? id)
+        public ActionResult Details(string username, int? divenumber)
         {
-            if (id == null)
+            if (divenumber == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Dive dive = db.Dives.Find(id);
+            ApplicationUser user = GetCurrentUser(username);
+                Dive dive = null;
+
+            dive = user.Dives.Where(a => a.DiveNumber == divenumber).Single();
 
             if (dive == null)
             {
@@ -63,7 +67,7 @@ namespace Duiklogboek.Controllers.DivelogApp
 
                 dive.DiveNumber = GetNextDiveNumber(username);
 
-                ApplicationUser user = db.Users.SingleOrDefault(a => a.UserName == username);
+                ApplicationUser user = GetCurrentUser(username);
                 if (user != default(ApplicationUser))
                 {
                     user.Dives.Add(dive);
@@ -77,13 +81,18 @@ namespace Duiklogboek.Controllers.DivelogApp
         }
 
         // GET: Dives/Edit/username/5
-        public ActionResult Edit(string username, int? id)
+        public ActionResult Edit(string username, int? divenumber)
         {
-            if (id == null)
+            if (divenumber == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Dive dive = db.Dives.Find(id);
+            //Dive dive = db.Dives.Find(id);
+            ApplicationUser user = GetCurrentUser(username);
+            Dive dive = null;
+
+            dive = user.Dives.Where(a => a.DiveNumber == divenumber).Single();
+
             if (dive == null)
             {
                 return HttpNotFound();
@@ -108,13 +117,18 @@ namespace Duiklogboek.Controllers.DivelogApp
         }
 
         // GET: Dives/Delete/username/5
-        public ActionResult Delete(string username, int? id)
+        public ActionResult Delete(string username, int? divenumber)
         {
-            if (id == null)
+            if (divenumber == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Dive dive = db.Dives.Find(id);
+            //Dive dive = db.Dives.Find(divenumber);
+            ApplicationUser user = GetCurrentUser(username);
+            Dive dive = null;
+
+            dive = user.Dives.Where(a => a.DiveNumber == divenumber).Single();
+
             if (dive == null)
             {
                 return HttpNotFound();
@@ -125,9 +139,14 @@ namespace Duiklogboek.Controllers.DivelogApp
         // POST: Dives/Delete/username/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string username, int id)
+        public ActionResult DeleteConfirmed(string username, int divenumber)
         {
-            Dive dive = db.Dives.Find(id);
+            //Dive dive = db.Dives.Find(id);
+            ApplicationUser user = GetCurrentUser(username);
+            Dive dive = null;
+
+            dive = user.Dives.Where(a => a.DiveNumber == divenumber).Single();
+
             db.Dives.Remove(dive);
             db.SaveChanges();
             return RedirectToAction("Index", "Dives", new { username = username });
@@ -165,7 +184,14 @@ namespace Duiklogboek.Controllers.DivelogApp
             }
 
             return nextDiveNumber;
+        }
 
+        private ApplicationUser GetCurrentUser(string username)
+        {
+            var store = new UserStore<ApplicationUser>(db);
+            var userManager = new UserManager<ApplicationUser>(store);
+            ApplicationUser user = userManager.FindByName(username);
+            return user;
         }
     }
 }

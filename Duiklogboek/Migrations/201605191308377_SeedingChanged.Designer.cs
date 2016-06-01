@@ -7,13 +7,13 @@ namespace Duiklogboek.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class TEST : IMigrationMetadata
+    public sealed partial class SeedingChanged : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(TEST));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(SeedingChanged));
         
         string IMigrationMetadata.Id
         {
-            get { return "201605131139294_TEST"; }
+            get { return "201605191308377_SeedingChanged"; }
         }
         
         string IMigrationMetadata.Source

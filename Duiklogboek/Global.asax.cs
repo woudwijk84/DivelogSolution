@@ -1,6 +1,4 @@
-﻿using Duiklogboek.Models;
-using System.Data.Entity;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
@@ -12,6 +10,11 @@ namespace Duiklogboek
         {
             //Database.SetInitializer(new DropCreateDatabaseIfModelChanges<ApplicationDbContext>());
             //Database.SetInitializer(new InitDB());
+            //WebSecurity.InitializeDatabaseConnection("DefaultConnection", 
+            //                                         "AspNetUsers", 
+            //                                         "Id", 
+            //                                         "UserName", 
+            //                                         autoCreateTables: true);
 
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

@@ -15,8 +15,8 @@ namespace Duiklogboek
 
             routes.MapRoute(
                 name: "DivePerUser",
-                url: "{controller}/{action}/{username}/{id}",
-                defaults: new { controller = "Home", action = "Index", username="", id = UrlParameter.Optional }
+                url: "{controller}/{action}/{username}/{divenumber}",
+                defaults: new { controller = "Dives", action = "Index",  divenumber = UrlParameter.Optional }
             );
 
             routes.MapRoute(

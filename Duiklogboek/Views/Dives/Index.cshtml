@@ -1,14 +1,14 @@
 ﻿@model IEnumerable<Duiklogboek.Models.DivelogApp.Dive>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Dives";
     var userName = User.Identity.GetUserName();
 }
 
 <h2>Dives</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create", new { username = userName }, new {@class = "btn" })
+    @Html.ActionLink("Log New Dive", "Create", new { username = userName }, new {@class = "btn btn-default btn-primary" })
 </p>
 <table class="table">
     <tr>
@@ -73,9 +73,9 @@
                 @Html.DisplayFor(modelItem => item.Notes)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { username = userName, id = item.DiveId }) |
-                @Html.ActionLink("Details", "Details", new { username = userName, id = item.DiveId }) |
-                @Html.ActionLink("Delete", "Delete", new { username = userName, id = item.DiveId })
+                @Html.ActionLink("Edit", "Edit", new { username = userName, divenumber = item.DiveNumber }) |
+                @Html.ActionLink("Details", "Details", new { username = userName, divenumber = item.DiveNumber }) |
+                @Html.ActionLink("Delete", "Delete", new { username = userName, divenumber = item.DiveNumber })
             </td>
         </tr>
     }

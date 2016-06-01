@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Duiklogboek", "Duiklogboek\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Duiklogboek.Tests", "Duiklogboek.Tests\Duiklogboek.Tests.csproj", "{2F666AB2-F2B3-49E3-9D49-CB5A880E258A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiveDataAccess", "DiveDataAccess\DiveDataAccess.csproj", "{A5DF5999-A3DF-4BEC-9CCA-BED2EF026714}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{2F666AB2-F2B3-49E3-9D49-CB5A880E258A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F666AB2-F2B3-49E3-9D49-CB5A880E258A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F666AB2-F2B3-49E3-9D49-CB5A880E258A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5DF5999-A3DF-4BEC-9CCA-BED2EF026714}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5DF5999-A3DF-4BEC-9CCA-BED2EF026714}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5DF5999-A3DF-4BEC-9CCA-BED2EF026714}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5DF5999-A3DF-4BEC-9CCA-BED2EF026714}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

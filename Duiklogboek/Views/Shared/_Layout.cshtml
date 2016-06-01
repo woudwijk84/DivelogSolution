@@ -27,7 +27,10 @@
                     {
                         <li>@Html.ActionLink("Dives", "Index", "Dives", new { username = User.Identity.GetUserName() }, null)</li>
                     }
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    @if (User.IsInRole("admin"))
+                    {
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                    }
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
